@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/', [\App\Http\Controllers\TestController::class, 'test1']);
 Route::get('/test1', [\App\Http\Controllers\TestController::class, 'test1']);
 Route::get('/test2', [\App\Http\Controllers\TestController::class, 'test2']);
+Route::get('/test3', [\App\Http\Controllers\TestController::class, 'test3']);
+Route::post('/export_csv', [\App\Http\Controllers\TestController::class, 'exportCsv'])->name('export_csv');
+
