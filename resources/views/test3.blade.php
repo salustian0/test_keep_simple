@@ -125,9 +125,27 @@
             margin: 16px auto;
         }
 
+        .menu{
+            padding: 20px;
+            display: flex;
+            list-style: none;
+        }
+
+        .menu li{
+            margin-right: 16px;
+        }
+
     </style>
 </head>
 <body>
+<ul class="menu">
+    <li>
+        <a href="{{url('/test1')}}">Teste 1</a>
+    </li>
+    <li>
+        <a href="{{url('/test2')}}">Teste 2</a>
+    </li>
+</ul>
 
 <div class="container">
     <h1>Teste 3 - Cliente para consumo da api viacep com possibilidade de buscar por diferentes ceps</h1>
@@ -211,6 +229,7 @@
 
         btnSearch.addEventListener('click', () => {
             const cep = txtCep.value;
+            txtCep.value = ``
 
             if(loading === true) return;
 

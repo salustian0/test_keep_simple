@@ -41,9 +41,26 @@
         .bold{
             font-weight: 600;
         }
+        .menu{
+            padding: 20px;
+            display: flex;
+            list-style: none;
+        }
+
+        .menu li{
+            margin-right: 16px;
+        }
     </style>
 </head>
 <body>
+<ul class="menu">
+    <li>
+        <a href="{{url('/test2')}}">Teste 2</a>
+    </li>
+    <li>
+        <a href="{{url('/test3')}}">Teste 3</a>
+    </li>
+</ul>
 
     <div class="container">
         <h1>Teste 1 - Realizando uma chamada de api com fetch api para a api pública viacep</h1>
